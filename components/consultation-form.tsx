@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Check } from "lucide-react"
+import { Check, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -57,13 +57,16 @@ export function ConsultationForm({ open, onOpenChange }: ConsultationFormProps) 
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto scrolling-touch relative">
         <DialogHeader>
           <DialogTitle className="text-2xl font-playfair">Schedule a Consultation</DialogTitle>
           <DialogDescription>
             Fill out the form below and our team will get back to you within 24 hours.
           </DialogDescription>
         </DialogHeader>
+        <button type="button" onClick={() => onOpenChange(false)} className="absolute top-2 right-2 p-2">
+          <X className="h-5 w-5" />
+        </button>
         <form onSubmit={onSubmit} className="space-y-6 py-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
