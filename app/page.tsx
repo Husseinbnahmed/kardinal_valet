@@ -100,7 +100,7 @@ export default function Page() {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-5xl md:text-6xl lg:text-7xl font-playfair text-white font-bold leading-tight mb-6"
+                  className="text-4xl md:text-6xl lg:text-7xl font-playfair text-white font-bold leading-tight mb-6"
                 >
                   Elevating the Art of Valet Service
                 </motion.h1>
@@ -108,7 +108,7 @@ export default function Page() {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-lg md:text-xl text-white/90 mb-8"
+                  className="text-base md:text-xl text-white/90 mb-8"
                 >
                   Premium valet solutions for luxury properties, high-end establishments, and distinguished events.
                 </motion.p>
@@ -116,12 +116,12 @@ export default function Page() {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="flex gap-6 mb-8"
+                  className="flex flex-col md:flex-row gap-4 md:gap-6 mb-8"
                 >
                   {["24/7 Executive Management Support", "Direct access to ownership"].map((item, index) => (
                     <motion.div
                       key={item}
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 text-sm md:text-base"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.8 + index * 0.2 }}
@@ -169,12 +169,12 @@ export default function Page() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl font-playfair mb-8 text-primary"
+          className="text-3xl md:text-4xl font-playfair mb-8 text-primary text-center md:text-left"
         >
           Premium Valet Solutions
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {[
             { title: "Expert site evaluation", category: "CONSULTATION" },
             { title: "Tailored valet strategy", category: "PLANNING" },
@@ -244,7 +244,7 @@ export default function Page() {
             Industries We Serve
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 icon: Car,
@@ -361,11 +361,11 @@ export default function Page() {
       </section>
 
       <footer id="contact" className="container mx-auto px-4 py-16 mt-20 bg-cream">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div>
             <motion.a
               href="/"
-              className="text-4xl font-playfair font-bold tracking-tight text-primary"
+              className="text-3xl md:text-4xl font-playfair font-bold tracking-tight text-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -375,8 +375,8 @@ export default function Page() {
 
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-playfair mb-2 text-primary">Partner with us</h2>
-              <p className="text-2xl font-playfair text-primary">Elevate your parking experience.</p>
+              <h2 className="text-xl md:text-2xl font-playfair mb-2 text-primary">Partner with us</h2>
+              <p className="text-xl md:text-2xl font-playfair text-primary">Elevate your parking experience.</p>
             </div>
 
             <motion.div
